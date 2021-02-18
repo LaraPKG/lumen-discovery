@@ -16,6 +16,11 @@
     "require-dev": {
         "illuminate/support": "^8.28"
     },
+    "autoload": {
+        "psr-4": {
+            "LaraPkg\\LumenDiscover\\": "src"
+        }
+    },
     "scripts": {
         "post-autoload-dump": [
             "LaraPkg\\LumenDiscover\\Events\\Dump::post"
