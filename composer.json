@@ -1,0 +1,24 @@
+{
+    "name": "larapkg/lumen-discovery",
+    "description": "Add package discovery to your lumen application.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ron Appleton",
+            "email": "ron@appleton.digital"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ronappleton/php-discover": "^7.4"
+    },
+    "require-dev": {
+        "illuminate/support": "^8.28"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "LaraPkg\\LumenDiscover\\Events\\Dump::post"
+        ]
+    }
+}
