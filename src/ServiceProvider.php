@@ -22,12 +22,18 @@ class ServiceProvider extends BaseServiceProvider
     {
         $cache = $this->app->make(PackageLoader::class);
 
-        foreach ($cache->get('providers') as $provider) {
-            $this->app->register($provider);
-        }
+        foreach ($cache->get() as $package) {
+            if (!empty($package['providers'])) {
+                array_walk($package['providers'], function ($provider) {
+                    $this->app->register($provider);
+                });
+            }
 
-        foreach ($cache->get('aliases') as $key => $alias) {
-            $this->app->alias($key, $alias);
+            if (!empty($package['aliases'])) {
+                array_walk($package['aliases'], function ($alias, $class) {
+                    $this->app->alias($alias, $class);
+                });
+            }
         }
     }
 }
