@@ -5,7 +5,7 @@ Add package discovery to your lumen application.
 
 Require via composer:
 
-`composer require larapkg/lumen-discover`
+`composer require larapkg/lumen-discovery`
 
 Open your base `composer.json` file in your project root and add the following to the end of the file:
 
