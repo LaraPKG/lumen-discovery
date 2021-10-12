@@ -12,7 +12,7 @@ Open your base `composer.json` file in your project root and add the following t
 
     "scripts": {
             "post-autoload-dump": [
-                "LaraPkg\LumenDiscover\Events\Dump::post"
+                "LaraPkg\\LumenDiscover\\Events\\Dump::post"
             ]
         }
 
