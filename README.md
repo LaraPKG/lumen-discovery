@@ -43,7 +43,7 @@ To make a package you write compatible with this package, you will need to add t
 With this package you can use `laravel` or `lumen` interchangeably but remember if you want to use your packages with Laravel
 you should stick with the `laravel` naming convention.
 
-That's it, now you can pull laravel packages into your lumen app and watch them self register, or you can build you own packages
+That's it, now you can pull laravel packages into your lumen app and watch them self register, or you can build your own packages
 that will also self-register. Have fun!
 
 The base repository this work is off of is [composer/composer](https://github.com/composer/composer) and it is well worth a read.
