@@ -6,7 +6,9 @@ namespace LaraPkg\LumenDiscover;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use RonAppleton\Discover\Helpers\PackageLoader;
+use LaraPkg\LumenDiscover\Events\Dump;
+use RonAppleton\Discover\Helpers\Manager;
+
 
 /**
  * Class ServiceProvider
@@ -20,9 +22,9 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $cache = $this->app->make(PackageLoader::class);
+        $cache = new Manager(Dump::$discoverPaths);
 
-        foreach ($cache->get() as $package) {
+        foreach ($cache->cacheGet() as $package) {
             if (!empty($package['providers'])) {
                 array_walk($package['providers'], function ($provider) {
                     $this->app->register($provider);
