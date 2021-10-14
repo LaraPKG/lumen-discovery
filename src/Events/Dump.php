@@ -11,7 +11,7 @@ class Dump extends BaseDump
     /**
      * @var array|string[]
      */
-    protected static array $discoverPaths = [
+    public static array $discoverPaths = [
         'laravel',
         'lumen',
     ];
