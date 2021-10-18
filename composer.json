@@ -1,12 +1,22 @@
 {
     "name": "larapkg/lumen-discovery",
     "description": "Add package discovery to your lumen application.",
+    "keywords": [
+        "Laravel",
+        "Lumen",
+        "LaraPKG",
+        "develop"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Ron Appleton",
             "email": "ron@appleton.digital"
+        },
+        {
+            "name": "Paul Dawson",
+            "email": "me@pdawson.me"
         }
     ],
     "require": {
@@ -26,4 +36,5 @@
             "LaraPkg\\LumenDiscover\\Events\\Dump::post"
         ]
     }
+
 }

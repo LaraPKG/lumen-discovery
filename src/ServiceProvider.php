@@ -6,22 +6,24 @@ namespace LaraPkg\LumenDiscover;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+
 use LaraPkg\LumenDiscover\Events\Dump;
 use RonAppleton\Discover\Helpers\Manager;
 
-
 /**
  * Class ServiceProvider
+ *
  * @package LaraPkg\LumenDiscover
- * @author Ron Appleton <ron@appleton.digital>
+ * @author Ron Appleton <ron@gmail.com>
  */
 class ServiceProvider extends BaseServiceProvider
 {
     /**
      * @throws BindingResolutionException
      */
-    public function register()
+    public function register(): void
     {
+
         $cache = new Manager(Dump::$discoverPaths);
 
         foreach ($cache->cacheGet() as $package) {
