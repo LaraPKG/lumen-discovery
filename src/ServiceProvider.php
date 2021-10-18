@@ -14,7 +14,7 @@ use RonAppleton\Discover\Helpers\Manager;
  * Class ServiceProvider
  *
  * @package LaraPkg\LumenDiscover
- * @author Ron Appleton <ron@gmail.com>
+ * @author Ron Appleton <ron.appleton@gmail.com>
  */
 class ServiceProvider extends BaseServiceProvider
 {
