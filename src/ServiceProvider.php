@@ -35,7 +35,9 @@ class ServiceProvider extends BaseServiceProvider
 
             if (!empty($package['aliases'])) {
                 array_walk($package['aliases'], function ($alias, $class) {
-                    $this->app->alias($alias, $class);
+                    if(!class_exists($class)){
+                        class_alias($alias, $class);
+                    }
                 });
             }
         }
